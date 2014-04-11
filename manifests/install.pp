@@ -155,9 +155,9 @@ define tomcat::install (
 
   exec { "extract_tomcat-${mod_name}":
     cwd     => $cachedir,
-    command => "mkdir extracted; tar -C extracted -xzf ${source} && touch .tomcat_extracted",
+    command => "mkdir extracted; tar -C extracted -xzf ${ti_source} && touch .tomcat_extracted",
     creates => "${cachedir}/.tomcat_extracted",
-    require => File["${cachedir}/${source}"],
+    require => File["${cachedir}/${ti_source}"],
   }
 
   exec { "create_target_tomcat-${mod_name}":
