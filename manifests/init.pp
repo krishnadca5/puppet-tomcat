@@ -1,5 +1,6 @@
 #Modified for testing git
 #second change
+#this change is after creating new branch 'newbranch'
 
 # == Class: tomcat
 #
